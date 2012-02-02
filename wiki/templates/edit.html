@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{ page.name }}</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="python flask application" />
+    <meta name="description" content="simplest wiki" />
+  </head>
+  <body>
+    <form action="{{save_url}}" method="POST">
+      <textarea name="body" rows="10" cols="60">{{ page.data }}</textarea>
+      <input type="submit" value="Salva">
+    </form>
+  </body>
+</html>
