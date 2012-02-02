@@ -1,0 +1,18 @@
+Very simple wiki
+
+Dependencies:
+
+* Flask
+* Flask-Babel
+* Flask-SQLAlchemy
+
+Howto:
+
+$ virtualenv flask
+$ cd flask
+$ source bin/activate
+$ easy_install flask
+$ easy_install flask-babel
+$ easy_install flask-sqlalchemy
+$ cd wiki
+$ python wiki.py
