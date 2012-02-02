@@ -14,5 +14,6 @@ $ source bin/activate
 $ easy_install flask
 $ easy_install flask-babel
 $ easy_install flask-sqlalchemy
+$ git clone <repo> wiki
 $ cd wiki
 $ python wiki.py
