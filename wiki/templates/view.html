@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>{{ page.name }}</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"/>
     <meta name="keywords" content="python flask application" />
     <meta name="description" content="simplest wiki" />
   </head>
   <body>
-    <div id="top">
+    <header>
       <h1>{{ page.name }}</h1>
-    </div>
-    <div id="middle">
-      <h2>Stai visualizzando {{ page.name }}</h2>
-      <p>Torna alla <a href="{{ url_for('view_page', name='FrontPage') }}">FrontPage</a></p>
-    </div>
-    <div id="content">
-    {{ content }}
-    </div>
-    <div id="bottom">
-      <p><a href="{{ url_for('edit_page', name=page.name) }}">Modifica questa pagina</a></p>
-    </div>
+    </header>
+    <nav>
+      <ul>
+	<li><a href="{{ url_for('view_page', name='FrontPage')}}">Torna a FrontPage</a></li>
+	<li><a href="{{ url_for('edit_page', name=page.name) }}">Modifica questa pagina</a></li>
+      </ul>
+    </nav>
+    <section>
+      <pre>{{ content }}</pre>
+    </section>
+    <footer>
+      <p>§</p>
+    </footer>
   </body>
 </html>

@@ -1,15 +1,28 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <meta charset="utf-8">
     <title>{{ page.name }}</title>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}"/>
     <meta name="keywords" content="python flask application" />
     <meta name="description" content="simplest wiki" />
   </head>
   <body>
+    <header>
+      <h1>{{ page.name }}</h1>
+    </header>
+    <nav>
+      <ul>
+	<li><a href="{{ url_for('view_page', name=page.name)}}">Torna a {{ page.name}}</a></li>
+    </nav>
     <form action="{{save_url}}" method="POST">
-      <textarea name="body" rows="10" cols="60">{{ page.data }}</textarea>
-      <input type="submit" value="Salva">
+      <ul>
+	<li><textarea name="body" rows="10" cols="60" placeholder="Scrivi qui il contenuto della pagina. Qualunque parola con due maiuscole (es. ParolaParola) diventerà un link a una pagina nuova o già esistente." autofocus>{{ page.data }}</textarea></li>
+	<li><input type="submit" value="Salva"></li>
+      </ul>
     </form>
+    <footer>
+      <p>§</p>
+    </footer>
   </body>
 </html>
