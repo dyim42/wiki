@@ -39,6 +39,6 @@ img.me{display:block;float:right;border:1px solid black;margin-left:1.75em}
 .phonebook article p,.phonebook article address{margin:0 0 0 120px}
 .review article p{margin:1.75em 0}
 form {padding: 1em 0 0 0; text-align:center;}
-form ul{margin:0;padding:0 1em 0 0}
+form ul{margin:0;padding:0 1em 0 0;list-style:none}
 form li{display:block; padding-left:1em}
 section{padding: 1em 4em 1em 4em}
