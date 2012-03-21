@@ -42,3 +42,4 @@ form {padding: 1em 0 0 0; text-align:center;}
 form ul{margin:0;padding:0 1em 0 0;list-style:none}
 form li{display:block; padding-left:1em}
 section{padding: 1em 4em 1em 4em}
+section pre {white-space: pre-wrap;}
