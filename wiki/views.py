@@ -20,7 +20,7 @@ from flask import (
     Response,
     )
 
-wikiwords = re.compile(r'\b([A-Z][a-z]+[A-Z][a-z]+)')
+wikiwords = re.compile(r'\b([A-Z]\w+[A-Z]+\w+)\b')
 
 @app.route('/')
 def view_wiki():
